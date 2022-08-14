@@ -18,11 +18,9 @@ function palindrome(str) {
   }
 
   reverseArr = [...strArr].reverse();
-  console.log(reverseArr.join(""));
-  console.log(strArr.join(""));
 
   return reverseArr.join("") === strArr.join("");
 }
 
 console.log(`not a palindrome  ${palindrome("not a palindrome")}`);
-console.log(`_eye ${palindrome("0_0 (: - :) 0-0")}`);
+console.log(`_eye ${palindrome("_eye")}`);
