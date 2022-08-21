@@ -13,9 +13,9 @@ const calculator = {
   },
 };
 
-calculator.read(5, 5);
-calculator.sum();
-calculator.mul();
+// calculator.read(5, 5);
+// calculator.sum();
+// calculator.mul();
 
 let ladder = {
   step: 0,
@@ -33,4 +33,28 @@ let ladder = {
   },
 };
 
-ladder.up().up().down().showStep().down().showStep();
+// ladder.up().up().down().showStep().down().showStep();
+
+function Calculator(a, b) {
+  this.a = +a;
+  this.b = +b;
+  this.read = function () {
+    console.log(this.a);
+    console.log(this.b);
+  };
+  this.sum = function () {
+    console.log(this.a + this.b);
+  };
+  this.mul = function () {
+    console.log(this.a * this.b);
+  };
+}
+
+const calc = new Calculator(
+  prompt("Введіть число a"),
+  prompt("Введіть число b")
+);
+
+calc.read();
+calc.sum();
+calc.mul();
