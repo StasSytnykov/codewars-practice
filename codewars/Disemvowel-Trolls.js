@@ -1,6 +1,6 @@
 function disemvowel(str) {
-  const regex = /[^aeiou]/g;
-  return str.match(regex).join("");
+  const regex = /[^aeiouAEIOU]/g;
+  return str.match(regex) && str.match(regex).join("");
 }
 
-console.log(disemvowel("What are you, a communist?"));
+console.log(disemvowel("This website is for losers LOL!"));
