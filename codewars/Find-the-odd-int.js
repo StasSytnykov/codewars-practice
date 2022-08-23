@@ -1,19 +1,7 @@
 function findOdd(A) {
   const obj = {};
 
-  for (let i = 0; i < A.length; i += 1) {
-    obj[A[i]] = 0;
-  }
-
-  const objKeys = Object.keys(obj);
-
-  for (let i = 0; i < A.length; i += 1) {
-    objKeys.forEach((item) => {
-      if (+item === A[i]) {
-        obj[A[i]] += 1;
-      }
-    });
-  }
+  A.forEach((el) => (obj[el] ? obj[el]++ : (obj[el] = 1)));
 
   for (const key in obj) {
     if (obj[key] % 2 != 0) {
