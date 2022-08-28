@@ -15,4 +15,10 @@ function isIsogram(str) {
   return true;
 }
 
+const shortisIsogram = (str) => {
+  const set = new Set(str.toLowerCase());
+  return set.size === str.length;
+};
+
 console.log(isIsogram("Dermatoglyphics"));
+console.log(shortisIsogram("aba"));
